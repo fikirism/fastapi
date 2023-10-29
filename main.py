@@ -3,7 +3,11 @@ from fastapi import FastAPI, Response, status, HTTPException
 from pydantic import BaseModel
 from random import randrange
 
-app = FastAPI()
+app = FastAPI(
+    title="FASTAPI CRUD OPERATION APP",
+    docs_url="/",
+    description="learning fastapi"
+)
 
 class Post(BaseModel):
     title: str
